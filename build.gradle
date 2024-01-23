@@ -26,19 +26,21 @@ dependencies {
 
 	/* Spring docs */
 	implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui'
+
 	/* prometheus */
 	implementation 'io.micrometer:micrometer-registry-prometheus'
+
 	/* Spring boot Actuator */
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
 	/* auto compile */
 	compileOnly("org.springframework.boot:spring-boot-devtools")
-
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	/* lombok for test */
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
