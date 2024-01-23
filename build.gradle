@@ -29,6 +29,8 @@ dependencies {
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui'
 	/* prometheus */
 	implementation 'io.micrometer:micrometer-registry-prometheus'
+	/* Spring boot Actuator */
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	/* auto compile */
 	compileOnly("org.springframework.boot:spring-boot-devtools")
 
