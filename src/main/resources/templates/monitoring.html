@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<table>
+    <tr th:each="prometheus : ${data}" >
+        <td th:text="${prometheus.key}">subject</td>
+        <td th:text="${prometheus.value}">subject</td>
+    </tr>
+</table>
+</body>
+</html>
