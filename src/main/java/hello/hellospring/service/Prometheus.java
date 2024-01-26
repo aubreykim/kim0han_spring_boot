@@ -57,7 +57,6 @@ public class Prometheus {
                 System.out.println("Failed to query Prometheus: " + responseCode);
                 resultMap.put("error ::: "+query, responseCode);
             }
-
             System.out.println(resultMap.toString());
         }
         return resultMap;

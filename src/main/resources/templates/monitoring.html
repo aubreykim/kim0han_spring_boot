@@ -1,15 +1,56 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <title>Hello</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<table>
-    <tr th:each="prometheus : ${data}" >
-        <td th:text="${prometheus.key}">subject</td>
-        <td th:text="${prometheus.value}">subject</td>
-    </tr>
-</table>
+    <p th:text="'응답 시간: ' +${responseTime}">responseTime</p>
+    <table>
+        <tr>
+            <th colspan="2">Heap</th>
+        </tr>
+        <tr>
+            <th>initial</th>
+            <td th:text="${heap.initial}"></td>
+        </tr>
+        <tr>
+            <th>used</th>
+            <td th:text="${heap.used}"></td>
+        </tr>
+        <tr>
+            <th>committed</th>
+            <td th:text="${heap.committed}"></td>
+        </tr>
+        <tr>
+            <th>max</th>
+            <td th:text="${heap.max}"></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="5">CPU</th>
+        </tr>
+        <tr>
+            <th>cpuUsage</th>
+            <td th:text="${cpu.cpuUsage}"></td>
+        </tr>
+        <tr>
+            <th>memoryTotal</th>
+            <td th:text="${cpu.memoryTotal}"></td>
+        </tr>
+        <tr>
+            <th>memoryFree</th>
+            <td th:text="${cpu.memoryFree}"></td>
+        </tr>
+        <tr>
+            <th>diskTotal</th>
+            <td th:text="${cpu.diskTotal}"></td>
+        </tr>
+        <tr>
+            <th>diskUsable</th>
+            <td th:text="${cpu.diskUsable}"></td>
+        </tr>
+    </table>
 </body>
 </html>

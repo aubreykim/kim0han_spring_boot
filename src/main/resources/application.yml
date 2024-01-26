@@ -1,7 +1,13 @@
-management:
-  endpoints:
-    prometheus:
-      enabled: true
-    web:
-      exposure:
-        include: prometheus
+logging:
+  level:
+    root: info
+  file:
+    path: ./logs
+    name: app-local.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 7
+# management:
+#  endpoints: prometheus: enabled: true
+# web: exposure: include: prometheus
